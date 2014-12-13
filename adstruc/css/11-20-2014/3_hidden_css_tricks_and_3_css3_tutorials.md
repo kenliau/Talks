@@ -55,7 +55,8 @@ If you take a look at the HTML below:
     </html>
 
 
-<img src="counters.png" width="80%"" height="80%">
+<img src="counter.png" width="80%"" height="80%">
+#####[Counter Demo](counter.html)
 
 
 #### Navigation Separator
@@ -113,3 +114,68 @@ Adjacent selector will select only the element that is immediately preceded by t
             </nav>
         </body>
     </html>
+    
+#####[Navigation Demo](nav-separator.html)
+
+
+#### Columns in CSS
+
+With columns in CSS, it is able to separate a block of text for us in columns. 
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+
+                body {
+                    margin: 60px;
+                    line-height: 2em;
+                }
+
+                h1 {
+                    text-align: center;
+                    text-decoration: underline;
+                    margin-bottom: 50px;
+                }
+
+                .two-columns {
+                    -moz-columns: 2; -webkit-columns: 2; columns: 2;
+                }
+
+                .three-columns {
+                    -moz-columns: 3; -webkit-columns: 3; columns: 3;
+                }
+
+            </style>
+        </head>
+        <body>
+
+            <h1> CSS COLUMNS </h1>
+
+            <div class="three-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum</div>
+            
+            <br />
+
+            <div class="two-columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+            qui officia deserunt mollit anim id est laborum</div>
+
+        </body>
+    </html>
+    
+<img src="columns.png" width="80%"" height="80%">
+#####[Columns Demo](columns.html)
+
+
+### 3 CSS3 Tutorial
+1. 3D Button
+2. Navigation Separator
+3. Columns
