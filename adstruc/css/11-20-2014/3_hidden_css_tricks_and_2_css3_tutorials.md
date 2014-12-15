@@ -1,17 +1,17 @@
-## 3 Hidden CSS Tricks and 3 CSS3 Tutorials
+# 3 Hidden CSS Tricks and 2 CSS3 Tutorials
 
 A couple weeks ago, my product team at [ADstruc](https://adstruc.com) gave me a chance to talk about CSS. 
 
 I then took a deeper look at some CSS tricks that I think are rarely discussed by people but still amazing to learn about them.
 
-Here are 3 cool hidden CSS tricks I found that fascinate me and 3 regular CSS3 tutorials.
+Here are 3 cool hidden CSS tricks I found that fascinate me and 2 regular CSS3 tutorials.
 
-### 3 CSS Tricks
+## 3 CSS Tricks
 1. Counters
 2. Navigation Separator
 3. Columns
 
-#### Counters
+### <u>Counters</u>
 
 If you're a programmer, you will definitely use counter somewhere in your code whether it is PHP, JavaScript, Ruby, or Pyhon.
 
@@ -57,9 +57,11 @@ If you take a look at the HTML below:
 
 <img src="counter.png" width="80%"" height="80%">
 #####[Counter Demo](counter.html)
+<br/>
+<hr/>
+<br/>
 
-
-#### Navigation Separator
+### <u>Navigation Separator</u>
 
 Sometimes when we are surfing through the internet, we will come across websites with navigation links with separator between them.
 
@@ -116,9 +118,11 @@ Adjacent selector will select only the element that is immediately preceded by t
     </html>
     
 #####[Navigation Demo](nav-separator.html)
+<br/>
+<hr/>
+<br/>
 
-
-#### Columns in CSS
+### <u>Columns in CSS</u>
 
 With columns in CSS, it is able to separate a block of text for us in columns. 
 
@@ -173,9 +177,141 @@ With columns in CSS, it is able to separate a block of text for us in columns.
     
 <img src="columns.png" width="80%"" height="80%">
 #####[Columns Demo](columns.html)
+<br/>
+<hr/>
+<br/>
 
-
-### 3 CSS3 Tutorial
+## 2 CSS3 Tutorial
 1. 3D Button
-2. Navigation Separator
-3. Columns
+2. Animation
+
+
+### <u>3D Button</u>
+
+CSS3 comes with animation that we can perform on HTML elements. This simple tutorial will show you how to make a button presses down when clicked. 
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+
+                button {
+                    background: #2ecc71;
+                    border-radius: 4px;
+                    margin: 0;
+                    outline: 0; /* No focus outline */
+                    padding: 12px 20px;
+                    border: 0;
+                    cursor: pointer;
+                    box-shadow: 0 5px 0 #27ae60; /* xOffset yOffset blur */
+                    transition: all .1s linear;
+                }
+
+                button:active {
+                    box-shadow: 0 2px 0 #27ae60; /* xOffset yOffset blur */
+                    transform: translateY(3px); /* move down */
+                }
+
+            </style>
+        </head>
+        <body>
+            <button>Awesome Button</button>
+        </body>
+    </html>
+    
+The way 3D effect works like this.
+Take a look at 
+
+    button {
+    	transition: all .1s linear;
+    }
+    
+    button:active {
+		box-shadow: 0 2px 0 #27ae60; /* xOffset yOffset blur */
+        transform: translateY(3px); /* move down */
+	}
+
+When a button is clicked and held, it is in the button:active mode. At this time, the CSS3 transition effect will be activated and all CSS property will be changed as fast as 0.1 second.
+
+So, this css pseudo-class will be decrease the box-shadow yOffset from 5px to 2px.
+Then, it is using transform CSS property to translate the whole button down 3px.
+By doing this, it performs a 3D effect of a button being pressed down.
+
+When the click is released, the CSS3 transition effect will lose it's effect and go back to it's original button state. 
+    
+<img src="button.png" width="80%"" height="80%">
+#####[Button Demo](button.html)
+<br/>
+<hr/>
+<br/>
+
+
+### <u>Animation</u>
+
+Another CSS3 feature is animation. 
+
+Here is an animation of a fish swimming...
+
+	<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+
+                body {
+                    background: #31477d;
+                    width: 600px;
+                    height: 600px;
+                }
+
+                .fish {
+                    -webkit-animation-duration: 3.5s;
+                    -webkit-animation-name: swim;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-direction: alternate;
+                }
+
+                @-webkit-keyframes swim {
+                    from {
+                        margin-left:100%;
+                        width:50%
+                    }
+
+                    0% {
+                        margin-top: 30%;
+                        margin-left:80%;
+                        width:40%;
+                    }
+
+                    50% {
+                        margin-top: 40%;
+                        margin-left:40%;
+                        width:20%;
+                    }
+
+                    to {
+                        margin-top: 20%;
+                        margin-left:0%;
+                        width:15%;
+                    }
+                }
+
+            </style>
+        </head>
+        <body>
+            <img src="fish.gif" class="fish">
+        </body>
+    </html
+    
+As you can see, we are assigning animation CSS properties to .fish class.
+This animation will run infinite time for 3.5s each way. Then it will alternate it's direction every 3.5 seconds. I gave this animation function a name of **swim**.
+
+Next thing we do is assign keyframes for this swim animation function.
+It must have **from**, and **to**. If you like to add additional keyframes, you can. I added two more 0% and 50%. These keyframes means the percent completion of each animation each way. So at 1.75 seconds of each animation, which is 50% of 3.5s, I want the .fish class to have margin-top of 40%, margin-left of 80%, and width of 20%.
+
+The final frame of the animation, which is defined in **to** means the fish will end up with margin-top f 20%, margin-left of 0% and width of 15%. 
+
+<img src="animation.png" width="80%"" height="80%">
+#####[Fish Animation Demo](animation.html)
+<br/>
+<hr/>
+<br/>
